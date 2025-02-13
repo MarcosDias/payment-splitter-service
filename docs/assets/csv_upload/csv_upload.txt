@@ -1,0 +1,17 @@
+title Peer-to-Peer Payment Splitter: Use Case - File Upload data
+
+participant Customer
+participant payment-splitter-service
+participant AWS S3
+participant AWS SQS
+
+Customer->payment-splitter-service:Request is done with csv file
+
+
+payment-splitter-service->AWS S3:Upload file to AWS S3
+payment-splitter-service->AWS SQS:event sent with csv files data
+Customer<-payment-splitter-service:Request is returned
+AWS SQS->payment-splitter-service:service receives event\nto process file
+AWS S3->payment-splitter-service:Get csv file\nwith event data
+
+note right of payment-splitter-service:Process expenses from file

@@ -1,0 +1,13 @@
+title Peer-to-Peer Payment Splitter: Use Case - An expense is added
+
+participant Customer
+participant payment-splitter-service
+participant AWS SNS
+participant AWS SES
+
+Customer->payment-splitter-service:request called
+
+note right of payment-splitter-service:Service receive the payload, \nprocess the request
+payment-splitter-service->AWS SNS:event with new expense information
+Customer<-payment-splitter-service:Request is returned
+AWS SNS->AWS SES:send email
