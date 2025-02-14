@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:13  
+    container_name: postgres-container
+    environment:
+      POSTGRES_USER: local
+      POSTGRES_PASSWORD: local
+      POSTGRES_DB: payment_splitter
+    ports:
+      - '5432:5432'
