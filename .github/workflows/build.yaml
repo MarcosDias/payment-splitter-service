@@ -1,6 +1,6 @@
 name: build-test-project
 on:
-  pull_request:
+  push:
     branches: ['*']
   workflow_dispatch:  
 
