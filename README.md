@@ -2,6 +2,8 @@
 
 Project developed as a technical test for Foundation Source - Peer-to-Peer Payment Splitter
 
+To view the rest of the documentation on the solution design, please access the `docs` folder.
+
 ## Project setup
 
 ```bash
