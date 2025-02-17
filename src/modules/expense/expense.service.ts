@@ -14,7 +14,9 @@ export class ExpenseService {
 
   async addExpense(newExpense: AddExpense): Promise<any> {
     this.isValidMember(newExpense)
-    const group = this.groupExpenseService.find({ id: newExpense.group.id })
+    await this.groupExpenseService.find({
+      id: newExpense.group.id,
+    })
     // sum amount on group.balance (using external lib ex.: https://currency.js.org/)
     // add expensive on group entity
     // save group cascade to save group and a new expense
