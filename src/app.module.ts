@@ -3,6 +3,7 @@ import { HealthCheckModule } from './modules/health-check/health-check.module'
 import { DatabaseModule } from './modules/database/database.module'
 import { ConfigModule } from '@nestjs/config'
 import { GroupExpenseModule } from './modules/group-expense/group-expense.module'
+import { AwsServicesModule } from './modules/aws-services/aws-services.module'
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { GroupExpenseModule } from './modules/group-expense/group-expense.module
     HealthCheckModule,
     DatabaseModule,
     GroupExpenseModule,
+    AwsServicesModule,
   ],
 })
 export class AppModule {}
