@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "4a8caa03-ab92-4c33-8ab5-b2956fd61de4",
+		"name": "Peer-to-Peer Payment Splitter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42382016"
+	},
+	"item": [
+		{
+			"name": "Add new Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Grupo1\",\n  \"members\": [\n    {\n      \"name\": \"usuario1\",\n      \"email\": \"usuario@email.com\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"group"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
